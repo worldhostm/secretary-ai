@@ -100,8 +100,8 @@ export default function VoiceAssistantInterface() {
           <div className="text-red-500 mb-4">
             <MicOff size={48} className="mx-auto" />
           </div>
-          <h2 className="text-xl font-bold text-white mb-2">음성 인식 미지원</h2>
-          <p className="text-white">
+          <h2 className="text-xl font-bold text-gray-800 mb-2">음성 인식 미지원</h2>
+          <p className="text-gray-600">
             현재 브라우저에서 음성 인식을 지원하지 않습니다. 
             Chrome, Edge, Safari 등의 최신 브라우저를 사용해주세요.
           </p>
@@ -204,7 +204,7 @@ export default function VoiceAssistantInterface() {
         <div className="grid md:grid-cols-2 gap-6">
           {/* 오늘의 일정 */}
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
               <Calendar size={20} className="text-blue-500" />
               오늘의 일정
             </h3>
@@ -212,19 +212,19 @@ export default function VoiceAssistantInterface() {
               {getTodaySchedules().length > 0 ? (
                 getTodaySchedules().map((schedule) => (
                   <div key={schedule.id} className="border-l-4 border-blue-500 pl-4 py-2">
-                    <p className="font-medium text-white">{schedule.title}</p>
-                    <p className="text-sm text-white">{schedule.time}</p>
+                    <p className="font-medium text-gray-800">{schedule.title}</p>
+                    <p className="text-sm text-gray-600">{schedule.time}</p>
                   </div>
                 ))
               ) : (
-                <p className="text-white text-center py-4">오늘은 일정이 없습니다</p>
+                <p className="text-gray-600 text-center py-4">오늘은 일정이 없습니다</p>
               )}
             </div>
           </div>
 
           {/* 최근 메모 */}
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
               <FileText size={20} className="text-green-500" />
               최근 메모
             </h3>
@@ -232,12 +232,12 @@ export default function VoiceAssistantInterface() {
               {getRecentMemos().length > 0 ? (
                 getRecentMemos().map((memo) => (
                   <div key={memo.id} className="border-l-4 border-green-500 pl-4 py-2">
-                    <p className="font-medium text-white">{memo.title}</p>
-                    <p className="text-sm text-white line-clamp-2">{memo.content}</p>
+                    <p className="font-medium text-gray-800">{memo.title}</p>
+                    <p className="text-sm text-gray-600 line-clamp-2">{memo.content}</p>
                   </div>
                 ))
               ) : (
-                <p className="text-white text-center py-4">저장된 메모가 없습니다</p>
+                <p className="text-gray-600 text-center py-4">저장된 메모가 없습니다</p>
               )}
             </div>
           </div>
@@ -245,10 +245,10 @@ export default function VoiceAssistantInterface() {
 
         {/* 사용법 가이드 */}
         <div className="bg-white rounded-lg shadow-lg p-6 mt-6">
-          <h3 className="text-lg font-semibold text-white mb-4">사용법 가이드</h3>
-          <div className="grid md:grid-cols-2 gap-4 text-sm text-white">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">사용법 가이드</h3>
+          <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
             <div>
-              <h4 className="font-medium text-white mb-2">일정 관리</h4>
+              <h4 className="font-medium text-gray-800 mb-2">일정 관리</h4>
               <ul className="space-y-1">
                 <li>• "오늘 일정 알려줘"</li>
                 <li>• "내일 10시에 회의 등록해줘"</li>
@@ -256,7 +256,7 @@ export default function VoiceAssistantInterface() {
               </ul>
             </div>
             <div>
-              <h4 className="font-medium text-white mb-2">메모 관리</h4>
+              <h4 className="font-medium text-gray-800 mb-2">메모 관리</h4>
               <ul className="space-y-1">
                 <li>• "메모해줘 우체국 들르기"</li>
                 <li>• "기록해줘 프로젝트 아이디어"</li>

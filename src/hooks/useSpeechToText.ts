@@ -3,36 +3,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { useAppStore } from '@/lib/store';
 
-// interface SpeechRecognition extends EventTarget {
-//   continuous: boolean;
-//   interimResults: boolean;
-//   lang: string;
-//   start(): void;
-//   stop(): void;
-//   abort(): void;
-// }
-
-// interface SpeechRecognitionEvent extends Event {
-//   results: SpeechRecognitionResultList;
-//   resultIndex: number;
-// }
-
-// interface SpeechRecognitionErrorEvent extends Event {
-//   error: string;
-//   message: string;
-// }
-
-// declare global {
-//   interface Window {
-//     webkitSpeechRecognition: {
-//       new(): SpeechRecognition;
-//     };
-//     SpeechRecognition: {
-//       new(): SpeechRecognition;
-//     };
-//   }
-// }
-
 export const useSpeechToText = () => {
   const { 
     isListening, 
